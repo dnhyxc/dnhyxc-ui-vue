@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "dev:play": "pnpm -C play dev",
+    "dev:docs": "pnpm -C docs dev",
     "prepare": "husky install",
     "test": "npx eslint ./packages  --ext ts,vue,js --fix"
   },
