@@ -6,28 +6,7 @@ import vueParser from 'vue-eslint-parser';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import globals from 'globals';
 
-const customTsFlatConfig = [
-  {
-    name: 'typescript-eslint/base',
-    files: ['**/*.ts'],
-    languageOptions: {
-      parser: tsEslintParser,
-      sourceType: 'module',
-      parserOptions: {
-        ecmaFeatures: { jsx: false }
-      }
-    },
-    rules: {
-      ...tsEslintPlugin.configs.recommended.rules,
-      '@typescript-eslint/no-confusing-non-null-assertion': 2
-    },
-    plugins: {
-      '@typescript-eslint': tsEslintPlugin
-    }
-  }
-];
-
-const flatConfig = [
+const baseConfig = [
   // 全局配置
   {
     name: 'global config',
@@ -71,22 +50,41 @@ const flatConfig = [
   },
 
   // JS/TS 文件配置
+  // {
+  //   files: ['**/*.{js,ts}'],
+  //   languageOptions: {
+  //     parser: tsEslintParser, // 统一使用 TS 解析器
+  //     parserOptions: {
+  //       ecmaVersion: 'latest',
+  //       sourceType: 'module',
+  //       ecmaFeatures: { jsx: false }
+  //     }
+  //   }
+  // },
+  // JS/TS 文件配置
   {
+    name: 'typescript-eslint/base',
+    // files: ['**/*.ts'],
     files: ['**/*.{js,ts}'],
     languageOptions: {
-      parser: tsEslintParser, // 统一使用 TS 解析器
+      parser: tsEslintParser,
+      sourceType: 'module',
       parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
         ecmaFeatures: { jsx: false }
       }
+    },
+    rules: {
+      ...tsEslintPlugin.configs.recommended.rules,
+      '@typescript-eslint/no-confusing-non-null-assertion': 2
+    },
+    plugins: {
+      '@typescript-eslint': tsEslintPlugin
     }
   },
-
   // 忽略文件
   {
     ignores: ['dist/**', 'node_modules/**']
   }
 ];
 
-export default [eslint.configs.recommended, eslintPluginPrettierRecommended, ...flatConfig, ...customTsFlatConfig];
+export default [eslint.configs.recommended, eslintPluginPrettierRecommended, ...baseConfig];
