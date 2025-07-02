@@ -83,7 +83,7 @@ const baseConfig = [
   },
   // 忽略文件
   {
-    ignores: ['dist/**', 'node_modules/**']
+    ignores: ['packages/*/dist/**', 'node_modules/**']
   }
 ];
 
