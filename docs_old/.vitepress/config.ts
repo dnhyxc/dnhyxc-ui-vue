@@ -4,8 +4,6 @@ import { fileURLToPath, URL } from 'node:url';
 import { demoPreviewPlugin } from '@vitepress-code-preview/plugin';
 
 export default defineConfig({
-  base: './',
-  outDir: '../dist',
   title: 'dnhyxc-ui',
   description: 'Vue3 UI Component',
   themeConfig: {
@@ -20,34 +18,30 @@ export default defineConfig({
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2023-present dnhyxc'
     },
-    sidebar: {
-      '/guide/': [
-        {
-          text: '指南',
-          items: [
-            {
-              text: '安装',
-              link: '/guide/installation'
-            },
-            {
-              text: '快速开始',
-              link: '/guide/quick-start'
-            }
-          ]
-        }
-      ],
-      '/components/': [
-        {
-          text: '基础组件',
-          items: [
-            {
-              text: 'Icon 按钮',
-              link: '/components/icon'
-            }
-          ]
-        }
-      ]
-    },
+    sidebar: [
+      {
+        text: '指南',
+        items: [
+          {
+            text: '安装',
+            link: '/guide/installation'
+          },
+          {
+            text: '快速开始',
+            link: '/guide/quick-start'
+          }
+        ]
+      },
+      {
+        text: '基础组件',
+        items: [
+          {
+            text: 'Icon 按钮',
+            link: '/components/icon'
+          }
+        ]
+      }
+    ],
     nav: [
       { text: '指南', link: '/guide/installation' },
       { text: '组件', link: '/components/icon' }

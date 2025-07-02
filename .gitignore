@@ -22,3 +22,5 @@ dist.zip
 *.njsproj
 *.sln
 *.sw?
+docs/cache
+docs/dist
