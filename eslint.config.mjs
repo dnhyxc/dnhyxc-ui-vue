@@ -19,12 +19,12 @@ const customTsFlatConfig = [
     },
     rules: {
       ...tsEslintPlugin.configs.recommended.rules,
-      '@typescript-eslint/no-confusing-non-null-assertion': 2,
+      '@typescript-eslint/no-confusing-non-null-assertion': 2
     },
     plugins: {
-      '@typescript-eslint': tsEslintPlugin,
-    },
-  },
+      '@typescript-eslint': tsEslintPlugin
+    }
+  }
 ];
 
 const flatConfig = [
@@ -35,16 +35,16 @@ const flatConfig = [
       globals: {
         ...globals.es2022,
         ...globals.browser,
-        ...globals.node,
+        ...globals.node
       },
-      sourceType: 'module', // 确保设置为 module
+      sourceType: 'module' // 确保设置为 module
     },
     rules: {
       'no-dupe-class-members': 0,
       'no-redeclare': 0,
       'no-undef': 0,
-      'no-unused-vars': 0,
-    },
+      'no-unused-vars': 0
+    }
   },
 
   // Vue 文件配置
@@ -62,11 +62,11 @@ const flatConfig = [
       }
     },
     plugins: {
-      vue: vuePlugin,
+      vue: vuePlugin
     },
     rules: {
       ...vuePlugin.configs['vue3-recommended'].rules,
-      'vue/multi-word-component-names': 'off',
+      'vue/multi-word-component-names': 'off'
     }
   },
 
@@ -85,13 +85,8 @@ const flatConfig = [
 
   // 忽略文件
   {
-    ignores: ['dist/**', 'node_modules/**'],
+    ignores: ['dist/**', 'node_modules/**']
   }
 ];
 
-export default [
-  eslint.configs.recommended,
-  eslintPluginPrettierRecommended,
-  ...flatConfig,
-  ...customTsFlatConfig,
-];
+export default [eslint.configs.recommended, eslintPluginPrettierRecommended, ...flatConfig, ...customTsFlatConfig];
