@@ -1,6 +1,7 @@
 {
   "name": "@dnhyxc-ui/theme-chalk",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

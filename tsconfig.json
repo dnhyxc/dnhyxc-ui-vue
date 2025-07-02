@@ -30,6 +30,6 @@
     //   "@/*": ["./src/*"]
     // }
   },
-  // "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "include": ["./packages/**/*"],
   "exclude": ["node_modules", "dist/**", "**__tests__"]
 }
