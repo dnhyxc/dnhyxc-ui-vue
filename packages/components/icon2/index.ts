@@ -1,4 +1,4 @@
-import { withInstall, type SFCWithInstall } from '@/utils';
+import { withInstall, type SFCWithInstall } from '@dnhyxc-ui/utils';
 import Icon from './src/icon2.vue';
 
 // const NIcon = withInstall(Icon);

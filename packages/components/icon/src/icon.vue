@@ -13,7 +13,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import type { CSSProperties } from 'vue';
-import { createNamespace } from '@/utils';
+import { createNamespace } from '@dnhyxc-ui/utils';
 import { iconProps } from './icon';
 
 defineOptions({

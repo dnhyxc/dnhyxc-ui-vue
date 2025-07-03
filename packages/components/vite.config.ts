@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 import { rmSync } from 'fs';
 import vue from '@vitejs/plugin-vue';
-import path from 'path';
+// import path from 'path';
 import dts from 'vite-plugin-dts';
 
 // 打包前先删除 dist 目录
@@ -29,7 +29,7 @@ export default defineConfig({
     },
     rollupOptions: {
       // 外部化处理依赖
-      external: ['vue'],
+      external: ['vue', '@dnhyxc-ui/utils'],
       input: ['./index.ts'],
       output: [
         {
@@ -69,10 +69,10 @@ export default defineConfig({
       include: ['./**/*'],
       outDir: ['dist/es', 'dist/lib']
     })
-  ],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, '.')
-    }
-  }
+  ]
+  // resolve: {
+  //   alias: {
+  //     '@': path.resolve(__dirname, '.')
+  //   }
+  // }
 });
