@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { NIcon2 } from 'dnhyxc-ui';
 import { Earth } from '@vicons/ionicons5';
 import '@dnhyxc-ui/theme-chalk/src/index.scss';
 </script>
@@ -12,6 +13,9 @@ import '@dnhyxc-ui/theme-chalk/src/index.scss';
     <n-icon :size="20" color="skyblue">
       <Earth />
     </n-icon>
+    <n-icon2 :size="50" color="pink">
+      <Earth />
+    </n-icon2>
   </div>
 </template>
 

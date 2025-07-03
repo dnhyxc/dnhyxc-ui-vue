@@ -24,10 +24,10 @@
     "noImplicitAny": true, // 不允许隐式any
     "noLib": false, // 不处理类库
     "forceConsistentCasingInFileNames": true, // 强制区分文件名大小写
-    "typeRoots": ["./node_modules/@types", "../typings"] // 添加这行
-    // "paths": {
-    //   "@/*": ["./src/*"]
-    // }
+    "typeRoots": ["./node_modules/@types", "../typings"], // 添加这行
+    "paths": {
+      "@/*": ["./utils"]
+    }
   },
   "include": ["../components/**/*"],
   "exclude": ["node_modules", "dist/**"]

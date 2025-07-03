@@ -14,16 +14,16 @@
 import { computed } from 'vue';
 import type { CSSProperties } from 'vue';
 import { createNamespace } from '@/utils';
-import { iconProps } from './icon';
+import { iconProps2 } from './icon2';
 
 defineOptions({
-  name: 'NIcon',
+  name: 'NIcon2',
   inheritAttrs: false // 禁用继承父组件的属性
 });
 
 const bem = createNamespace('icon');
 
-const props = defineProps(iconProps);
+const props = defineProps(iconProps2);
 
 const styles = computed<CSSProperties>(() => {
   if (!props.size && !props.color) return {};
